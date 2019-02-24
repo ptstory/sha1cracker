@@ -12,7 +12,7 @@ This Python 2.7 program cracks a given SHA-1 hash by checking against a password
 
 ## Using the program
 
-To use the program, you will need to input a hash value as an argument. If attempting to crack a salted hash value, you may provide the salt term as an optional argument. The following hash values were used in development and testing:
+To use the program, you will need to input a hash value as an argument. If attempting to crack a salted hash value, you may provide the salt term as an optional argument. The following hash values / salt terms were used in development and testing:
 
 ```
 b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3
@@ -43,7 +43,7 @@ $ python sha1cracker.py ece4bb07f2580ed8b39aa52b7f7f918e43033ea1 f0744d60dd500c9
 $ python sha1cracker_improved.py ece4bb07f2580ed8b39aa52b7f7f918e43033ea1 f0744d60dd500c92c0d37c16174cc58d3c4bdd8e
 ```
 
-The improved program provides the same information as the original (plaintext password, attempts, duration), but in a more concise way without printing complete sentences. By executing fewer nested loops, the imroved program is able to crack the salted hash in around half the time as the original:
+The improved program provides the same information as the original (plaintext password, attempts, duration), but in a more concise way without printing complete sentences. By executing fewer nested loops, the improved program is able to crack the salted hash in less than half the time as the original:
 
 ![Image of improved program output](/improved.png?raw=true)
 

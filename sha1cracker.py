@@ -26,5 +26,3 @@ except:
             if hash == hashlib.sha1(password.rstrip('\n')).hexdigest():
                 end = time.clock()
                 print("wow it only took us " + str(attempts) + " guesses and " + str(end-start) + " seconds to crack your hashed password: " + password)
-            print("your password was not found in the list (good job)")
-            quit()

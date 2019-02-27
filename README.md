@@ -56,6 +56,15 @@ It uses `permutations` from the `itertools` library and depending on where the w
 
 For the sake of curiosity, I tried running `34302959e138917ce9339c0b30ec50e650ce6b40` through hashcat, a well known open source password recovery tool with the following results, but was unable to confirm in my own program:
 
+Hashcat was able to crack the hash using what's called a "combinator  attack" which takes in two lists of words (in our case the same `password_list.txt`) and combines them to create a new list of candidate words. Using my desktop's GPU it took less than five minutes to crack!
+
+```shell
+$  ./hashcat64.exe -m 100 -a 1 -j '$ ' hashes.txt password_list.txt password_list.txt
+```
+- `-m 100` tells hashcat that the hash type is `SHA-1` (mode 100)
+- `-a 1`   tells hashcat to use combinator attack (attack mode 1)
+- `-j '$'` tells hashcat to apply a rule that adds a single space to the left wordlist
+
 ![Image of hashcat output](/hashcat2.png?raw=true)
 
 

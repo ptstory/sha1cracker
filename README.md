@@ -56,7 +56,7 @@ It uses `permutations` from the `itertools` library and depending on where the w
 
 For the sake of curiosity, I tried running `34302959e138917ce9339c0b30ec50e650ce6b40` through hashcat, a well known open source password recovery tool with the following results, but was unable to confirm in my own program:
 
-![Image of hashcat output](/hashcat.png?raw=true)
+![Image of hashcat output](/hashcat2.png?raw=true)
 
 
 
